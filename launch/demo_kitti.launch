@@ -1,0 +1,4 @@
+<launch>
+  <include file="$(find aloam_velodyne)/launch/kitti_helper.launch" />
+  <include file="$(find aloam_velodyne)/launch/aloam_velodyne_HDL_64.launch" />
+</launch>
