@@ -3,7 +3,7 @@
     <!-- <include file="$(find aloam_velodyne)/launch/kitti_helper.launch" /> -->
     <!-- <include file="$(find aloam_velodyne)/launch/aloam_velodyne_HDL_64.launch" /> -->
 
-    <param name="scan_line" type="int" value="64" />
+    <param name="scan_line" type="int" value="32" />
 
     <!-- if 1, do mapping 10 Hz, if 2, do mapping 5 Hz. Suggest to use 1, it will adjust frequence automaticlly -->
     <param name="mapping_skip_frame" type="int" value="1" />
@@ -15,8 +15,8 @@
     <param name="mapping_plane_resolution" type="double" value="0.8"/>
 
     <node pkg="aloam_velodyne" type="ascanRegistration"    name="ascanRegistration"    output="screen">
-        <remap from="/velodyne_points" to="/kitti/velo/pointcloud" />
-        <!--options: "/velodyne_points"  "/kitti/velo/pointcloud"  "/ns1/velodyne_points"-->
+        <remap from="/velodyne_points" to="/velodyne_points" />
+        <!--options: "/velodyne_points"  "/kitti/velo/pointcloud"-->
     </node>
 
     <node pkg="aloam_velodyne" type="alaserOdometry" name="alaserOdometry" output="screen" />
