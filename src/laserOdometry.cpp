@@ -61,11 +61,11 @@
 
 int corner_correspondence = 0, plane_correspondence = 0;
 
-constexpr double SCAN_PERIOD = 0.1;
+constexpr double SCAN_PERIOD = 0.05;
 constexpr double DISTANCE_SQ_THRESHOLD = 25;
 constexpr double NEARBY_SCAN = 2.5;
 
-int skipFrameNum = 5;
+int skipFrameNum = 0;
 bool systemInited = false;
 
 double timeCornerPointsSharp = 0;

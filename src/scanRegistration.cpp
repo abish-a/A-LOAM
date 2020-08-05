@@ -57,7 +57,7 @@ using std::atan2;
 using std::cos;
 using std::sin;
 
-const double scanPeriod = 0.1;
+const double scanPeriod = 0.05;
 
 const int systemDelay = 0; 
 int systemInitCount = 0;
